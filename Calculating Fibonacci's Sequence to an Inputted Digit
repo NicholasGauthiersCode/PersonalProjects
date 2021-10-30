@@ -1,0 +1,15 @@
+print("Please enter how many digits of Fibonacci's sequence you want")
+amount = int(input())
+count = 0
+num1 = 0
+num2 = 1
+fiblist = [1]
+
+while count < amount:
+    num3 = num1 + num2
+    fiblist.append(num3)
+    num1 = num2
+    num2 = num3
+    count += 1
+
+print(fiblist)
