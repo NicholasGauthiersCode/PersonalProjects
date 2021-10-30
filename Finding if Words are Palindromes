@@ -1,0 +1,17 @@
+count = 0
+
+palindrome = str(input("Please enter a word to see if its a palindrome: "))
+palindrome = palindrome.lower()
+
+length = len(palindrome) // 2
+
+
+for i in range(length):
+    if count != length:
+        if palindrome[i] == palindrome[-(i + 1)]:
+            count += 1
+            if count == length:
+                print("This word is a palindrome")
+        elif palindrome[i] != palindrome[-(i + 1)]:
+            print("This word is not a palindrome")
+            break
