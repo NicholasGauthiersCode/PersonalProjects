@@ -1,0 +1,24 @@
+num = 1
+numlist = []
+lessthan10= []
+greaterthan10 = []
+
+print("enter a number you want everthing to be less than")
+lessthen = int(input())
+
+while num > 0:
+    print('please enter number to add to list, type -1 to start rest of program')
+    num = int(input())
+    numlist.append(num)
+    print(numlist)
+
+numlist.pop()
+print(numlist)
+
+for i in range(len(numlist)):
+    if numlist[i] < lessthen:
+        lessthan10.append(numlist[i])
+    elif numlist[i] >= lessthen:          MY ANSWER
+        greaterthan10.append(numlist[i])
+print("The values less then", lessthen, "are", lessthan10)
+print("The values less the", lessthen, "are", greaterthan10)
