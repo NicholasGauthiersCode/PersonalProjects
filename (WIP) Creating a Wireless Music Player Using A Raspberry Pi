@@ -1,0 +1,150 @@
+import time
+import cv2
+import mss
+import numpy as np
+import pytesseract
+import webbrowser
+import os
+import sys
+from selenium import webdriver
+import requests
+from PIL import Image, ImageOps
+
+
+wordlist = [' ']
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files (x86)\Tesseract-OCR\tesseract.exe"
+mon = {'top': 950, 'left': 1530, 'width': 350, 'height': 40}
+
+with mss.mss() as sct:
+    while True:
+        convertedlist = []
+# -----------------getting the screenshot-------------------------------
+
+        output = "screenshot.png".format(**mon)
+
+        # Grab the data
+        sct_img = sct.grab(mon)
+
+        # Save to the picture file
+        mss.tools.to_png(sct_img.rgb, sct_img.size, output=output)
+        print(output)
+
+        im = Image.open('screenshot.png')
+        im_invert = ImageOps.invert(im)
+        im_invert.save('invert.png', quality=100)
+
+
+        image = Image.open('invert.png')
+        image = image.resize((image.size[0] * 5, image.size[1] * 5))
+        image.save('invert.png', quality = 100, dpi=(300,300))
+
+        cvnorm = cv2.imread('screenshot.png',0)
+        cvin = cv2.imread('invert.png', 0)
+
+
+        # scale_percent = 200  # percent of original size
+        # width = int(im.shape[1] * scale_percent / 100)
+        # height = int(im.shape[0] * scale_percent / 100)
+        # dim = (width, height)
+
+        #resize image
+        # resized = cv2.resize(im, dim, interpolation=cv2.INTER_CUBIC)
+
+        # im = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
+
+        # gray_image = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
+        #
+        # # converting it to binary image by Thresholding
+        #
+        # # this step is require if you have colored image because if you skip this part
+        #
+        # # then tesseract won't able to detect text correctly and this will give incorrect result
+        #
+        # threshold_img = cv2.threshold(gray_image, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
+        #
+        # # display image
+        #
+        # cv2.imshow('threshold', threshold_img)
+        # text = pytesseract.image_to_string(threshold_img)
+
+        text = pytesseract.image_to_string((Image.open('invert.png')))
+
+# ----------------------------------------------------------------------
+# ------------------converting image to words---------------------------
+
+        wordlist[0] = text
+
+        wordlist = text.split(' ')
+
+        wordlist[0] = wordlist[0].lower()
+
+        for w in wordlist:
+            convertedlist.append(w.strip())
+
+
+        print(wordlist)
+        print(convertedlist)
+        print(text)
+
+        cv2.imshow('invertedimage', cvnorm)
+        cv2.imshow('re', cvin)
+
+
+
+#-----------------------------------------------------------------------
+#--------------------all of the if statments----------------------------
+
+        # Press "q" to quit
+        if cv2.waitKey(25) & 0xFF == ord('q'):
+            cv2.destroyAllWindows()
+            break
+
+        if convertedlist[0] == 'play':
+            convertedlist.pop(0)
+            try:
+                url = convertedlist[0]
+                print(url, 'url')
+            except (IndexError):
+                convertedlist = ['lofi']
+                url = 'lofi'
+
+            try:
+                 response = requests.get(url)
+                 url = convertedlist[0]
+            except (requests.ConnectionError, requests.exceptions.MissingSchema):
+                convertedlist[0] = convertedlist[0].lower()
+
+
+            if convertedlist[0] == 'lofi':
+                url = 'https://www.youtube.com/watch?v=lTRiuFIWV54&ab_channel=LofiGirl'
+            elif convertedlist[0] == 'dark' and convertedlist[1] == 'academia':
+                url = 'https://www.youtube.com/watch?v=uQpmIm4I1dw&ab_channel=crachead'
+            elif convertedlist[0] == 'phorhead':
+                url = 'https://www.youtube.com/watch?v=MRhyOYGveyU&list=RDMRhyOYGveyU&start_radio=1&ab_channel=PhorHead'
+            elif convertedlist[0] == 'poop' and convertedlist[1] == 'music':
+                url = 'https://www.youtube.com/watch?v=YM6xP7KyW0I&ab_channel=MusicalMagician'
+            else:
+                pass
+
+
+
+            webbrowser.register('chrome',
+                                None,
+                                webbrowser.BackgroundBrowser(
+                                    "C:\Program Files\Google\Chrome\Application\chrome.exe"))
+            webbrowser.get('chrome').open(url)
+
+        for num in range(len(convertedlist)):
+            convertedlist[num] = convertedlist[num].lower()
+
+        print('\n',convertedlist)
+
+        if convertedlist[0] == 'full' and convertedlist[1] == 'stop':
+            raise SystemExit('DONE')
+
+        elif convertedlist[0] == 'stop' and convertedlist[1] == 'music':
+            browserExe = "chrome.exe"
+            os.system("taskkill /f /im " + browserExe)
+
+            # One screenshot per second
+        time.sleep(4)
