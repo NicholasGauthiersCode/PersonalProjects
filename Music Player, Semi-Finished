@@ -1,0 +1,122 @@
+import time
+import webbrowser
+import os
+import random
+import pyautogui
+import wmi
+
+
+lofilist = ["https://www.youtube.com/watch?v=n61ULEU7CO0&ab_channel=LofiGirl",
+            'https://www.youtube.com/watch?v=XE2IvHxdkDM&ab_channel=thebootlegboy',
+            'https://www.youtube.com/watch?v=qN8fReOhlRA&ab_channel=DreamhopMusic',
+            'https://www.youtube.com/watch?v=TWTV4T3yxzs&ab_channel=DreamhopMusic',
+            'https://www.youtube.com/watch?v=NxSDNogkKX0&ab_channel=Dreamy',
+            'https://www.youtube.com/watch?v=gnZImHvA0ME',
+            'https://www.youtube.com/watch?v=4Opexvp9uC8',
+            'https://www.youtube.com/watch?v=9t1nGNKdIgE']
+jazzlist = ['https://www.youtube.com/watch?v=pDfJuS8OksM', 'https://www.youtube.com/watch?v=x4ygVwbOyJU',
+            'https://www.youtube.com/watch?v=vM0QaXyFn34', 'https://www.youtube.com/watch?v=rGTw-0YAR8k',
+            'https://www.youtube.com/watch?v=ImDc04647L8', 'https://www.youtube.com/watch?v=-r9KkvKqKdk']
+darklist = ['https://www.youtube.com/watch?v=c1BJ4U9cJFc', 'https://www.youtube.com/watch?v=XGC80iRS7tw',
+            'https://www.youtube.com/watch?v=uQpmIm4I1dw', 'https://www.youtube.com/watch?v=h0ZiJbux4QI',
+            'https://www.youtube.com/watch?v=4JSExXm-eBE', 'https://www.youtube.com/watch?v=UrxlRXKii10',
+            'https://www.youtube.com/watch?v=gif16dFp32U', 'https://www.youtube.com/watch?v=2QcwuvYKdeE']
+ninetieslist = ['https://www.youtube.com/watch?v=nSZ25ahltbg', 'https://www.youtube.com/watch?v=ZdZE_GKyrbM',
+                'https://www.youtube.com/watch?v=EwzBjBHfDIs', 'https://www.youtube.com/watch?v=FbpEnkDQnhk',
+                'https://www.youtube.com/watch?v=5EtVJP0Dml4']
+
+
+
+
+
+path = r'C:\path_to_file'
+rtfpath = r'C:\path_to_file'
+
+
+def urlget(url):
+    webbrowser.register('chrome',None,
+                        webbrowser.BackgroundBrowser("C:\Program Files\Google\Chrome\Application\chrome.exe"))
+    webbrowser.get('chrome').open(url)
+    del url
+    time.sleep(2)
+    pyautogui.hotkey('f5')
+
+def writertf(word):
+    with open(rtfpath, 'w') as rtffile:
+        rtffile.truncate(0)
+        rtffile.write(word)
+
+def killbrowser():
+    browserExe = "chrome.exe"
+    os.system("taskkill /f /im " + browserExe)
+
+def songchoice(song):
+    url = random.choice(song)
+    file.truncate(0)
+    urlget(url)
+    writertf(done)
+    file.close()
+
+def killbrowserfull():
+    file.truncate(0)
+    killbrowser()
+    writertf(done)
+
+def chromecheck():
+    f = wmi.WMI()
+    flag = 0
+    for process in f.Win32_Process():
+        if "chrome.exe" == process.Name:
+            flag = 1
+            killbrowser()
+    if flag == 0:
+        pass
+
+
+done = 'DONE'
+
+while True:
+    time.sleep(4)
+    with open(path, 'r+') as file:
+        # read a list of lines into data
+        data = file.readlines()
+        if len(data) > 0:
+
+            words = data[0]
+            words.lower().strip()
+            wordslist = list(words.split(' '))
+
+            if wordslist[0] == 'play':
+                chromecheck()
+                if wordslist[1] == 'lofi':
+                    songchoice(lofilist)
+                elif wordslist[1] == 'jazz':
+                    songchoice(jazzlist)
+                elif wordslist[1] == 'dark':
+                    songchoice(darklist)
+                elif wordslist[1] == '90s':
+                    songchoice(ninetieslist)
+
+            elif wordslist[0] == 'url':
+                chromecheck()
+                url = wordslist[1]
+                file.truncate(0)
+                urlget(url)
+                writertf(done)
+                file.close()
+
+            elif wordslist[0] == 'full' and wordslist[1] == 'stop':
+                killbrowserfull()
+                raise SystemExit('DONE')
+
+            elif wordslist[0] == 'stop' and wordslist[1] == 'music':
+                killbrowserfull()
+                file.close()
+            elif wordslist[0] == 'help':
+                whattowrite = 'COMMAND YOU CAN USE:\nPlay Lofi (plays lofi)\nPlay Dark (plays dark academia)\nPlay Jazz (plays jazz)\nStop Music (stops music)\nFull Stop (fully stops the code)\nHelp (Gives this message)'
+                writertf(whattowrite)
+                file.close()
+
+
+        else:
+            pass
