@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> Free Things You Can Get With A&M Email </title>
+<body>
+  <h1 style="text-align:center" id="top"> Welcome To CollegeStuffCheap.xyz a Place to Find Things for Cheap Because You're a Broke College Student </h1>
+    <p style="text-align:center"> Here you will find a collection of things that you can use your
+    A&M email or ID to get cheaper or even free. <br/> I made this webssite because
+    after a lot of time digging I have realized there are a lot of weird things you can get for free just
+    by being a college student.</p>
+    <p style="text-align:center"> This website is also honestly just a way for me to learn HTML and how to build
+    webpages, but I hope it can be a bit of a help!</p>
+    <p style="text-align: center"> If you know of any good things you can get
+    for cheap send me a message on Discord WheeSnaaw#6512 and I'll add it onto here!<br/> (if you
+    are interesting in learning how I did this you can also shoot me a message and we can talk about it)<br/>
+    (a short explanation of it is I'm hosting a server off of Oracle's Virtual Private Servers and am hosting
+    a basic early internet era looking webpage)</p>
+  <hr/>
+
+  <!-- header with the differnt thing -->
+
+  <h3>Different Categories for Saving </h3>
+  <a href="#technology"> Technology </a><br/>
+  <a href="#education"> Education </a><br/>
+  <a href="#shopping"> Shopping </a><br/>
+  <a href="#entertainment"> Entertainment </a><br/>
+  <a href="#selfhelp"> Self Help </a>
+  <a href="#softwarecenter"> Software Center Apps </a><br/>
+  <br/>
+  <hr/>
+
+  <!-- all the tech things -->
+
+  <h2 id="technology"> Technology </h2>
+  <p> These are a lot of free things you can that have to do with the tech field, for all ya nerds </p>
+
+  <h3> Jetbrains Educational License (free) </h3>
+  <ul>
+  <p> Gets you a free educational license for jetbrains which gives you access to professional level IDEs for any
+    programming language you could want (C, C++, python, Java, and many others.)</p>
+  <p> Great for anyone who wants to go into computer science or just wants to keep learning </p>
+  <p> <a href="https://www.jetbrains.com/community/education/#students"> Link to Jetbrains Website </a></p>
+  </ul>
+
+  <h3> Github Student Developer Pack (free) </h3>
+  <ul>
+    <p> A very powerful set of tools worth thousands of dollars that gives you acess to applications
+    that people in the actual tech world use. Gives access to tools to teach and put programming into action </p>
+    <p><a href="https://education.github.com/pack"> Link to Github Website </a></p>
+  </ul>
+
+  <h3> Autodesk Suite (free) </h3>
+  <ul>
+    <p> Gives you full acess to 47 different Autodesk products which are mostly great CAD softwares </p>
+    <p> Good for any field of engineering </p>
+    <p> <a href="https://www.autodesk.com/education/edu-software/overview?sorting=featured&filters=individual">
+      Link to Autodesk Website
+    </a></p>
+  </ul>
+
+  <h3> Apple Pro Apps ($199.99) </h3>
+  <ul>
+    <p> A bundle of Final Cut Pro, Logic Pro, Motion, Compressor, and Mainstage. (Final
+    cut pro by itself is $299.99)</p>
+    <p><a href="https://support.apple.com/en-us/HT205928"> Link to Apple Website </a></p>
+  </ul>
+
+  <h3> Scite (30% off) </h3>
+  <ul>
+    <p> A website used to understand the papers you are citing more and how trustworthy they are to cite</p>
+    <p><a href="https://help.scite.ai/en-us/article/scite-for-students-8lo8oi/#:~:text=scite%20offers%20students%20a
+    %2030,our%20discount%20or%20extended%20tria"> Link to Scite Webstie </a></p>
+  </ul>
+
+  <h3> Adobe Create Cloud ($19.99) </h3>
+  <ul>
+    <p> Adobe's suite of apps for a third of the price (please dont buy this just pirate it adobe is a scam, i can
+    teach you how to do it) </p>
+    <p><a href="https://www.adobe.com/creativecloud/buy/students.html"> Link to Adobe's Homepage </a></p>
+  </ul>
+
+  <br/>
+  <p><a href="#top"> Click to go back to the top of the website </a></p>
+  <hr/>
+
+  <!-- All the education things -->
+
+  <h2 id="education"> Educational Things </h2>
+  <p> These are apps that are good for keeping you learning in whatever field you are doing </p>
+
+  <h3> O'Reilly Media (free) </h3>
+  <ul>
+    <p> Full access to O'Reilly medias online library of information books, mostly on topics centered
+    around tech. These are some of the most reputable and respected books for learning and have been
+    for decades </p>
+    <p><a href="https://www.oreilly.com/ "> Link to O'Reilly Medias Homepage </a></p>
+  </ul>
+
+  <br/>
+  <p><a href="#top"> Click to go back to the top of the website </a></p>
+  <hr/>
+
+  <!-- All the shoppping things -->
+
+  <h2 id="shopping"> Shopping </h2>
+  <p> For all those times you realize buying things is kind of expensive </p>
+
+  <h3> Unidays </h3>
+  <ul>
+  <p> This is really all I need to put for here. This website is great, you can find so many good deals
+  throughout the year. And it is constantyl being updated with stuff so check back in periodically
+  and you may be able to find something really good. </p>
+    <p><a href="https://www.myunidays.com/US/en-US"> Link to Unidays </a></p>
+  </ul>
+
+  <h3> Amazon Prime Student ($4.99) </h3>
+  <ul>
+    <p>	Amazon prime for only half the price and also includes the whole prime suite. Also gives access to Grubhub+
+      Student which gives unlimited free delivery.</p>
+    <p><a href="https://www.amazon.com/Amazon-Student/b?ie=UTF8&node=668781011 ">
+      Link to Amazon Website
+    </a></p>
+  </ul>
+
+  <br/>
+  <p><a href="#top"> Click to go back to the top of the website </a></p>
+  <hr/>
+
+  <!-- All the entertainment things -->
+
+  <h2 id="entertainment"> Entertainment </h2>
+  <p> College can be boring at times, so here are some things to keep you busy </p>
+
+  <h3> Spotify, Hulu (with ads), and Showtime ($4.99)</h3>
+  <ul>
+    <p>	Allows you to buy the three as a bundle for only 5 bucks instead of 25 like it usually would be. </p>
+    <p><a href="https://www.spotify.com/us/student/?utm_source=us-en_brand_contextual_text&utm_medium=paidsearch&utm_
+    campaign=alwayson_ucanz_us_performancemarketing_student_brand+contextual+text+exact+us-en+google&gclsrc=aw.ds&gclid
+    =CjwKCAiAtdGNBhAmEiwAWxGcUsqVGU_Ao0Y6P1eD1OJuWqtCyZOhot7mUtlPQqmUBLIPcppdPOLhVxoCgzkQAvD_BwE">
+      Link to Spotify Website
+    </a></p>
+  </ul>
+
+  <h3> Hulu (with ads) ($1.99) </h3>
+  <ul>
+    <p> Hulu with adds for a quarter of the price. </p>
+    <p><a href="https://www.hulu.com/student "> Link to Hulu Website </a></p>
+  </ul>
+
+  <h3> Discovery+ Student Edition ($3.99) </h3>
+  <ul>
+    <p> 4 bucks a month for discovery+ instead of $6. </p>
+    <p><a href="https://education.github.com/pack"> Link to Discover+ Website </a></p>
+  </ul>
+
+  <h3> Apple music and Apple TV ($4.99) </h3>
+  <ul>
+    <p> 5 dollars a month for apple music and apple tv instead of 15, good deal</p>
+    <p><a href="https://support.apple.com/en-us/HT205928"> Link to Apple Website </a></p>
+  </ul>
+
+  <br/>
+  <p><a href="#top"> Click to go back to the top of the website </a></p>
+  <hr/>
+
+  <!-- All the self help things -->
+
+  <h2 id="selfhelp"> Self Help </h2>
+  <p> Sometimes you just need a little help during your time at college and these can be a help </p>
+
+  <h3> Headspace ($9.99/year) </h3>
+  <ul>
+    <p> A one year subscription to headspace, a personal app to help with meditation and stress relief, for 10
+      dollars per year instead of 70</p>
+    <p><a hred="https://www.headspace.com/studentplan"> Link to Headspace Website </a></p>
+  </ul>
+
+  <h3> Notion (free) </h3>
+  <ul>
+    <p> An application to help you organize your notes in easy to understand categories </p>
+    <p><a href="https://www.notion.so/product/notion-for-education"> Link to Notion Website </a></p>
+  </ul>
+
+  <br/>
+  <p><a href="#top"> Click to go back to the top of the website </a></p>
+  <hr/>
+
+  <!-- All the software center things -->
+
+  <h2 id="softwarecenter"> Applications From the A&M Software Center </h2>
+  <p> If you have not looked at the software center yet, you are missing out. There are a lot of great free apps
+  that you will have to use at some point during your education, so why not get good at them now? </p>
+  <p> To get here go to <a href="https://software.tamu.edu/"> this link </a> and follow along
+  to find the software. </p>
+
+  <h3> Canvas GFX </h3>
+  <ul>
+    <p> Software used to draw and design, CAD application. </p>
+  </ul>
+
+  <h3> Circuit Design Pro </h3>
+  <ul>
+  <p> Software great for designing and simulating circuits, great for electrical engineers. </p>
+  </ul>
+
+  <h3> End Note </h3>
+  <ul>
+    <p> An app that stores and creates bibliographies while you write your essay to make it easier
+    on you. </p>
+  </ul>
+
+  <h3> Labview System Design </h3>
+  <ul>
+    <p> Application for the automation of lab machines (not the useful now but in the future it could be)</p>
+  </ul>
+
+  <h3> Texplot Academic Suite </h3>
+  <ul>
+    <p>An application for the visualization and analysis of data through heatmaps and plots</p>
+  </ul>
+
+  <h3> Ansys </h3>
+  <ul>
+    <p> An application for simulations, specified towards engineers </p>
+  </ul>
+
+  <h3> Altair </h3>
+  <ul>
+    <p>  An application that provides software and cloud solutions for simulation, IoT, high performance computing,
+      data analytics, and artificial intelligence.
+    </p>
+  </ul>
+
+  <h3> Matlabs </h3>
+  <ul>
+    <p>  Data science software used mainly for engineers and scientist, the predecessor to using python and the modules
+      pandas, matplotlib, and numpy </p>
+  </ul>
+
+  <h3> Solidworks </h3>
+  <ul>
+    <p>  One of the best CAD design softwares out there, great for the creating and modeling of objects </p>
+  </ul>
+
+  <br/>
+  <p><a href="#top"> Click to go back to the top of the website </a></p>
+  <hr/>
+
+  <h3> User Submissions </h3>
+  <p> If you have any thing that you think would be appropriate to add, please fill out this form and I will try to
+  add it </p>
+  <form method="POST" action="submit.php">
+    <input name="name" type="text" placeholder="name">
+    <input name="age" type="text" placeholder="age">
+    <input type="submit" value="submit">
+  </form>
+</body>
+</html>
